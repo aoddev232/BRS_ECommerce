@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+
+    <link rel="stylesheet" href="/style.css">
+    <script rel="script" src="/customer.js"></script>
+
+</head>
+<body>
+
+<div class="cart-page-container">
+    <div class="row">
+        <div id="cart-col-heading" class="col-md-12">
+            <div class="container d-flex align-items-center">
+
+                <div class="logo me-auto">
+                    <a href="/"><img src="/a\ new\ styling/images/logo.png" alt="" class="img-fluid"></a>
+                </div>
+                <div class="cart-page-heading">
+                    <h2>Shopping Cart</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table>
+                <thead>
+                <tr>
+                    <th>Product Image</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="entry : ${hashmap}">
+                    <td><img th:src="${entry.value.product_image}" id="cart-icon"></td>
+                    <td th:text="${entry.value.product_name}"></td>
+                    <td th:text="'€' + ${entry.value.price} + '0'"></td>
+                    <td>
+                        <form method="post" th:action="@{/remove}">
+                            <input type="hidden" name="key" th:value="${entry.key}" />
+                            <button type="submit" class="viewer">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div id="cart-card-column" class="col-md-12">
+            <div class="cart-card">
+                <h2>Total Amount Due</h2>
+                <p>€<span class="badge bg-dark text-light ms-1 rounded-pill" id="totalPrice"></span>.00</p>
+                <a href="/payment"><button class="cart-page-button">Payment</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

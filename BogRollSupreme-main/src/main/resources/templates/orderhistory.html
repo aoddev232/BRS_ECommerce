@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Orders</title>
+    <link type="text/css" rel="stylesheet" href="/ownerStyle.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sidebars/">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+<div class="parent-container">
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 style="text-align: center; padding-top: 50px;">View Orders</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Order Number</th>
+                                <th>Product Name</th>
+                                <th>Sku</th>
+                                <th>Price</th>
+                                <th>Day Ordered</th>
+                                <th>Fulfillment Status</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:each="order : ${orders}" >
+                                <td th:text="${order.order_number}"></td>
+                                <td th:text="${order.product_name}"></td>
+                                <td th:text="${order.sku}"></td>
+                                <td th:text="${order.price}"></td>
+                                <td th:text="${order.day_ordered}"></td>
+                                <td th:text="${order.fulfilled}"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

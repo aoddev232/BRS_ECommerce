@@ -1,0 +1,44 @@
+version: '3.7'
+
+services:
+  brs-db:
+    container_name: brs-db
+    image: mysql:8.0
+    networks:
+      - brs-network
+    environment:
+      - MYSQL_DATABASE=brs
+      - MYSQL_ROOT_PASSWORD=password123
+    volumes:
+      - dbvol:/var/lib/mysql
+      - ./sql-scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "3306:3306"
+    restart: always
+
+  brs-app:
+    build:
+      context: ./
+    container_name: brs-spring
+    image: bogrollsupreme/brs-store:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - brs-network
+    depends_on:
+      - brs-db
+    environment:
+      - MYSQL_HOST=brs-db
+      - MYSQL_USERNAME=root
+      - MYSQL_PASSWORD=password123
+      - MYSQL_ROOT_PASSWORD=password123
+      - MYSQL_DATABASE=brs
+      - MYSQL_PORT=3306
+
+networks:
+  brs-network:
+    name: brs-network
+
+volumes:
+  dbvol:
+

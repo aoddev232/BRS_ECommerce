@@ -1,0 +1,103 @@
+body {
+    background-color: aliceblue;
+}
+
+#cart-icon{
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cart-page-button {
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    font-size: 1rem;
+}
+
+table {
+    margin-top: 50px;                                                       /* adding top padding of 50px */
+    width: 80%;                                                             /* making tables take up 80% of screen width */
+    table-layout: fixed;                                                    /* fixing the table layout */
+    margin-left: auto;                                                      /* centering tables automatically */
+    margin-right: auto;                                                     /* centering table automatically */
+    background: linear-gradient(to top, #f77062 0%, #fe5196 100%);          /* adding background with fade effect */
+    border-radius: 10px;
+    text-align: center;                                                /* setting style of border - thickness, colour */
+}
+
+.cart-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 8px 16px rgba(247, 112, 98, 0.4), 0 6px 20px rgba(254, 81, 150, 0.4);
+}
+
+.cart-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cart-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.cart-card a {
+    text-decoration: none;
+}
+
+.payment-submit-button {
+    padding: 10px 20px
+}
+
+.payment-submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-submit-button:hover {
+    background-color: #0069d9;
+}
+
+#cart-card-column {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#cart-col-heading {
+    text-align: center;
+}
+
+.viewer {
+    text-decoration: none;                                                  /* removing text-decoration (underline) */
+    outline: none;                                                          /* removing outline */
+    margin: 25px auto;                                                      /* adding 25px top/bottom margin and auto for left/right margins */
+    color: #fff;                                                            /* changing color of button text */
+    padding: 10px 20px;                                                     /* adding padding between button text and border */
+    border-radius: 4px;                                                     /* rounding button corners */
+    background-image: linear-gradient(45deg, #ea0766, #2f4cd7);             /* changing background of buttons */
+}
+
+.cart-page-heading h2 {
+    font-size: 45px;
+}
+

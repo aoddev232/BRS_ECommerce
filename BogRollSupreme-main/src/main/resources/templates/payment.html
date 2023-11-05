@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+          name="viewport"
+          content="width=device-width,
+               initial-scale=1.0"/>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"></script>
+  <link rel="stylesheet" href="/paymentStyle.css">
+  <script rel="script" src="/customer.js"></script>
+</head>
+<body>
+<div class="container mt-4">
+  <div class="main-content">
+  </div>
+
+  <div class="centre-content mt-3">
+    <h1 class="price">Payment</h1>
+    <p class="course">
+      Your order will cost: <div id="currency-display"></div>
+      Select Payment Currency
+    </p>
+  </div>
+
+
+  <div class="last-content">
+    <button type="button" class="pay-now-btn" id="euro-btn" th:value="${euroValue}" onclick="updateCurrency(value)">
+      Euro
+    </button>
+    <button type="button" class="pay-now-btn" id="pound-btn" th:value="${poundValue}" onclick="updateCurrency(value)">
+      Pound
+    </button>
+    <button type="button" class="pay-now-btn" id="dollar-btn" th:value="${dollarValue}" onclick="updateCurrency(value)">
+      Dollar
+    </button>
+
+
+  </div>
+
+  <form class="card-details" id="payment-form" action="/home" method="post">
+    <p>Pay using Credit or Debit card</p>
+
+    <div class="card-number">
+      <label> Card Number </label>
+      <input type="text" class="card-number-field" placeholder="####-####-####" required/>
+    </div>
+    <br />
+    <div class="date-number">
+      <label> Expiry Date </label>
+      <input type="text" class="date-number-field" placeholder="DD-MM-YY" required/>
+    </div>
+
+    <div class="cvv-number">
+      <label> CVV number </label>
+      <input type="text" class="cvv-number-field" placeholder="xxx" required/>
+    </div>
+    <div class="nameholder-number">
+      <label> Card Holder name </label>
+      <input type="text" class="card-name-field" placeholder="Enter your Name" required/>
+    </div>
+    <button type="submit" class="submit-now-btn" id="submit-now-btn">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+.navigation-bar {
+    background: #131313;                                                      /* setting color of navbar */
+    font-size: 1.2rem;                                                          /* increasing font size of sections */
+    z-index: 1;                                                                 /* bringing navbar to front (important for sticky navbar) */
+}
+
+.navigation-bar-container {
+    display: flex;                                                              /* display as flex container */
+    justify-content: space-between;                                             /* adding space between the site name / log and section options */
+    height: 80px;                                                               /* setting height of navbar */
+    padding-right: 50px;                                                        /* adding padding to both sides of container for formatting */
+    padding-left: 50px;                                                         /* adding padding to both sides of container for formatting */
+}
+
+#navigation-bar-logo {
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);    /* setting background image of logo to fade colour */
+    -webkit-background-clip: text;                                              /* masking background image around the text */
+    background-clip: text;                                                      /* masking background image around the text */
+    -webkit-text-fill-color: transparent;                                       /* setting fill to transparent so we can see the background image through logo and site name */
+    display: flex;                                                              /* display as flex container */
+    align-items: center;                                                        /* center items vertically */
+    font-size: 2rem;                                                            /* setting font size of site name */
+}
+
+.fa-file-code {
+    margin-right: 0.5rem;                                                       /* adding space between logo and site name */
+}
+
+.navigation-bar-menu {
+    display: flex;                                                              /* display as flex container */
+    list-style: none;                                                           /* dont want a list style; set as none to avoid this */
+}
+
+.navigation-bar-item {
+    height: 80px;                                                               /* setting height of each section name - each item in navigation bar */
+}
+
+a:link {
+    text-decoration: none;                                                    /* removing underline from section links */
+}
+
+.navigation-bar-links {
+    color: #fff;                                                              /* set seciton color to white */
+    display: flex;                                                              /* display as flex container */
+    align-items: center;                                                        /* vertically centering items */
+    padding: 2rem;                                                              /* adding padding between sections */
+    height: 100%;                                                               /* setting height of each section name */
+}
+
+@media screen and (max-width: 960px) {
+    .navigation-bar-menu {
+        display: none;                                                          /* removing navigation bar when display is inadequate */
+    }
+}
+
+.sticky {
+    position: fixed;                                                            /* fixing position for navbar */
+    width: 100%;                                                                /* make navbar use entire screen */
+}
+
+.dark-mode {                                                                    /* inversing colors for dark mode */
+    background-color: #131313;
+    color: white;
+}
+
+.navigation-button {
+    padding-top: 15px;                                                          /* adding padding above toggle button for darkmode */
+}
+
+.navigation-bar button {
+    color: #fff;                                                              /* setting text colour in button to white */
+    padding: 10px 20px;                                                         /* adding padding between text and button border */
+    border: none;                                                               /* removing default border */
+    border-radius: 4px;                                                         /* rounding border corners */
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);    /* adding background with fade effect */
+    font-size: 1rem;                                                            /* setting font size */
+}
+
+button:hover {
+    cursor: pointer;                                                            /* changing cursor style when you hover over a button */
+}
+
+.footer-container {
+    height: 50px;                                                               /* height of footer */
+    background-color: #141414;                                                /* setting background colour of footer */
+    padding: 5rem;                                                              /* adding padding of size 5 rem to below footer */
+    display: flex;                                                              /* displaying element as block-level flex container */
+    flex-direction: column;                                                     /* display flexible items vertically */
+    justify-content: center;                                                    /* centering content */
+    color: #fff;                                                              /* setting colour of copyright to white */
+}
+
+#footer-logo {
+    color: #fff;                                                              /* setting footer logo to white */
+    text-decoration: none;                                                      /* removing text decoration */
+    font-size: 2rem;                                                            /* setting size of website name */
+}
+
+.social-icon-link {
+    font-size: 24px;                                                            /* setting size of inner social icon */
+}
+
+.social-media {
+    display: flex;                                                              /* displaying element as block-level flex container */
+    justify-content: space-between;                                             /* spreading items out by adding space between */
+    align-items: center;                                                        /* centering items */
+    width: 100%;                                                                /* setting width to 100% */
+    max-width: 1000px;                                                          /* allows width to go up to a maximum of 1000px on bigger screens */
+    margin: 40px auto 0 auto;
+}
+
+.social-icons {
+    display: flex;                                                              /* displaying element as block-level flex container */
+    justify-content: space-between;                                             /* adding space between icons*/
+    align-items: center;                                                        /* centering elements */
+    width: 240px;                                                               /* setting width of container */
+}
+
+.social-button {
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);    /* colour for social icons */
+    padding: 14px 32px;                                                         /* adding padding */
+    border: none;                                                               /* removing default black border line*/
+    border-radius: 4px;                                                         /* making rounded corners */
+}
+
+.social-button a {
+    color: #fff;                                                              /* making logos white */
+}
+
+.fade {
+    transform: translateY(150px);                                               /* setting element to move vertically 150px as its fading in */
+    transition: all 2s ease;                                                    /* transitioning the fade-in animation over two seconds */
+}
+
+.fade.active {
+    transform: translateY(0px);                                                 /* setting element to not move vertically at all */
+    opacity: 1;                                                                 /* making elements with fade attribute not transparent */
+}
+
+.initial-banner {
+    text-align: center;                                                         /* centering text horizontally */
+    height: 775px;                                                              /* setting height of background image */
+    background-image: url('/images/web3example.jpg');                           /* setting background image */
+}
+
+h1 {
+    padding-top: 200px;                                                         /* adding padding above heading */
+    font-size: 3rem;                                                            /* increasing font size */
+    color: #fff;                                                              /* setting font color to white */
+}
+
+.initial-banner h2 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.navigation-bar-logo {
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+}
+
+.logo-style {
+    margin-right: 20px;
+    height: 50px;
+    width: 50px;
+}
+
+/* Team shtuff*/
+.team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    background: #fff;
+}
+
+.team .member img {
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
+}
+
+.team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.section-title {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: "Brush Script MT", cursive;
+}
+
+.section-title p {
+    font-size: xx-large;
+    font-weight: bold;
+}

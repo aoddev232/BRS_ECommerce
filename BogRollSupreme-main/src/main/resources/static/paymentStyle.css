@@ -1,0 +1,152 @@
+
+/*Style sheet for the payment portal*/
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-top: 25px;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    height: 800px;
+    width: 400px;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-top-right-radius: 150px;
+}
+
+.main-content {
+    height: 235px;
+    background-color: #f77062;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 80px;
+    border-top: #FE5196FF;
+}
+
+.text {
+    text-align: center;
+    font-size: 300%;
+    text-decoration: aliceblue;
+    color: aliceblue;
+}
+
+.course {
+    color: #ffff;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.centre-content {
+    height: 180px;
+    margin: -70px 30px 20px;
+    color: aliceblue;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 25px;
+    padding-top: 0.5px;
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+.centre-content-h1 {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-weight: normal;
+}
+
+.price {
+    font-size: 60px;
+    margin-left: 5px;
+    bottom: 15px;
+    position: relative;
+}
+
+.pay-now-btn {
+    cursor: pointer;
+    color: #fff;
+    height: 50px;
+    width: 290px;
+    border: none;
+    margin: 5px 30px;
+    background-color: rgba(255, 117, 99, 0.89);
+    border-radius: 25px;
+    padding-top: 0.5px;
+    margin-left: 50px;
+}
+
+.card-details {
+    background: rgb(255, 65, 115);
+    color: rgb(225, 223, 233);
+    margin: 10px 30px;
+    padding: 10px;
+    /* border-bottom-left-radius: 80px; */
+}
+
+.card-details p {
+    font-size: 15px;
+}
+
+.card-details label {
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.submit-now-btn {
+    cursor: pointer;
+    color: #fff;
+    height: 30px;
+    width: 240px;
+    border: none;
+    margin: 5px 30px;
+    background-color: rgba(255, 117, 99, 0.89);
+    border-radius: 20px;
+    padding-top: 0.5px;
+}
+
+#submit-details{
+    display: none;
+}
